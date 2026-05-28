@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about the Life Decision Simulator - our mission, methodology, and how we help you make better decisions.">
+  <title>About | Life Decision Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="navbar-brand" aria-label="Life Decision Simulator Home">
+        <span class="brand-icon"><i class="fas fa-route"></i></span>
+        DecisionSim
+      </a>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+        <li role="none"><a href="simulator.html" role="menuitem">Start Simulation</a></li>
+        <li role="none"><a href="results.html" role="menuitem">Insights</a></li>
+        <li role="none"><a href="dashboard.html" role="menuitem">Dashboard</a></li>
+        <li role="none"><a href="about.html" role="menuitem" class="active">About</a></li>
+        <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>About DecisionSim</h1>
+      <p>Helping individuals make better decisions using structured analysis and visual insights.</p>
+    </div>
+  </section>
+
+  <!-- Stats Strip -->
+  <section class="section" style="padding:var(--space-2xl) 0;margin-top:-2rem;">
+    <div class="container">
+      <div class="dashboard-stats" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr));">
+        <div class="stat-card"><div class="stat-number" style="font-size:2rem;">10K+</div><div class="stat-label">Decisions Analyzed</div></div>
+        <div class="stat-card"><div class="stat-number" style="font-size:2rem;">50K+</div><div class="stat-label">Options Compared</div></div>
+        <div class="stat-card"><div class="stat-number" style="font-size:2rem;">98%</div><div class="stat-label">User Satisfaction</div></div>
+        <div class="stat-card"><div class="stat-number" style="font-size:2rem;">4.9</div><div class="stat-label">Avg Rating</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content fade-in">
+          <span class="section-tag">Mission</span>
+          <h2>Our Mission</h2>
+          <p>Life is a series of decisions. Some are small, others are life-changing. We believe that every important decision deserves a structured, thoughtful approach.</p>
+          <p>DecisionSim was built to help you cut through the noise, organize your thinking, and make choices you can feel confident about — backed by data, not just gut feeling.</p>
+        </div>
+        <div class="about-image fade-in" aria-hidden="true">
+          <i class="fas fa-bullseye"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodology with Formula Card -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Methodology</span>
+        <h2>How It Works</h2>
+        <p>Our approach is based on the Weighted Decision Matrix — a proven analytical framework.</p>
+      </div>
+
+      <div class="about-grid" style="margin-bottom:var(--space-3xl);">
+        <div class="about-content fade-in">
+          <p>The Weighted Decision Matrix helps you evaluate multiple options against criteria that matter to you. Each factor gets an importance weight, and each option gets a score per factor.</p>
+          <ul>
+            <li>Identify your options</li>
+            <li>Define evaluation factors</li>
+            <li>Assign importance weights (1-10)</li>
+            <li>Score each option per factor (1-10)</li>
+            <li>Calculate weighted scores</li>
+            <li>Compare and decide</li>
+          </ul>
+        </div>
+        <div class="about-image fade-in" aria-hidden="true">
+          <i class="fas fa-cogs"></i>
+        </div>
+      </div>
+
+      <!-- Formula Card -->
+      <div class="simulator-card fade-in" style="text-align:center;max-width:700px;margin:0 auto;">
+        <h3 style="margin-bottom:var(--space-md);">The Formula</h3>
+        <div style="background:var(--light);padding:var(--space-xl);border-radius:var(--radius-md);font-family:var(--font-heading);font-size:1.3rem;font-weight:600;color:var(--primary);letter-spacing:0.5px;margin-bottom:var(--space-lg);">
+          Final Score = &Sigma; ( Factor Weight &times; Option Rating )
+        </div>
+        <p style="color:var(--dark-3);font-size:0.9rem;line-height:1.7;">
+          Each option's total score is the sum of its ratings multiplied by each factor's importance weight.
+          Scores are then normalized to a 0&ndash;100% scale for easy comparison across options with different
+          numbers of factors.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Features</span>
+        <h2>Key Features</h2>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card fade-in" tabindex="0">
+          <div class="feature-icon"><i class="fas fa-th-list"></i></div>
+          <h3>Multi-Option Comparison</h3>
+          <p>Compare unlimited alternatives simultaneously in a single matrix.</p>
+        </article>
+        <article class="feature-card fade-in" tabindex="0">
+          <div class="feature-icon"><i class="fas fa-calculator"></i></div>
+          <h3>Weighted Scoring</h3>
+          <p>Mathematically sound prioritization with customizable importance levels.</p>
+        </article>
+        <article class="feature-card fade-in" tabindex="0">
+          <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Data Visualization</h3>
+          <p>Beautiful charts including bar, radar, and doughnut for instant comprehension.</p>
+        </article>
+        <article class="feature-card fade-in" tabindex="0">
+          <div class="feature-icon"><i class="fas fa-star"></i></div>
+          <h3>Personalized Recommendations</h3>
+          <p>AI-style insights that explain why each option ranks where it does.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why It Matters -->
+  <section class="section" style="background: var(--white);">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content fade-in">
+          <span class="section-tag">Why It Matters</span>
+          <h2>Why Structured Thinking Wins</h2>
+          <p>Research shows that structured decision-making reduces cognitive bias, increases confidence, and leads to better outcomes. By making your criteria explicit and your scoring transparent, you can:</p>
+          <ul>
+            <li>Eliminate unconscious bias</li>
+            <li>See the full picture objectively</li>
+            <li>Communicate decisions clearly to others</li>
+            <li>Learn from past choices over time</li>
+          </ul>
+        </div>
+        <div class="about-image fade-in" aria-hidden="true">
+          <i class="fas fa-brain"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="fade-in">Ready to Make Your Best Decision Yet?</h2>
+      <p class="fade-in">Try DecisionSim free — no sign-up required.</p>
+      <a href="simulator.html" class="btn btn-accent btn-lg fade-in">Start Now</a>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3><i class="fas fa-route"></i> DecisionSim</h3>
+          <p>Making better life decisions through structured analysis, weighted scoring, and intelligent insights.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="simulator.html">Start Simulation</a>
+          <a href="results.html">Insights</a>
+          <a href="dashboard.html">Dashboard</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 DecisionSim. All rights reserved.</span>
+        <span>Built with clarity in mind.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

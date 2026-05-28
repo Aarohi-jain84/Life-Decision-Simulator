@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Life Decision Simulator - Make better life decisions using structured analysis, weighted scoring, and visual insights.">
+  <meta name="theme-color" content="#2563EB">
+  <title>Life Decision Simulator | Make Smarter Choices</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="navbar-brand" aria-label="Life Decision Simulator Home">
+        <span class="brand-icon"><i class="fas fa-route"></i></span>
+        DecisionSim
+      </a>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a href="index.html" role="menuitem" class="active">Home</a></li>
+        <li role="none"><a href="simulator.html" role="menuitem">Start Simulation</a></li>
+        <li role="none"><a href="results.html" role="menuitem">Insights</a></li>
+        <li role="none"><a href="dashboard.html" role="menuitem">Dashboard</a></li>
+        <li role="none"><a href="about.html" role="menuitem">About</a></li>
+        <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-bg">
+      <img src="assets/images/crossroads.png" alt="Crossroads representing life decisions" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Standing at a Crossroad? Let Data Guide Your Next Step.</h1>
+      <p>Life is full of difficult choices. Compare alternatives, evaluate priorities, and discover the path that aligns best with your goals through intelligent decision simulation.</p>
+      <div class="hero-buttons">
+        <a href="simulator.html" class="btn btn-primary btn-lg">Explore My Options</a>
+        <a href="#how-it-works" class="btn btn-secondary btn-lg">Learn How It Works</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section" id="features" aria-labelledby="features-title">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Features</span>
+        <h2 id="features-title">Everything You Need to Decide with Confidence</h2>
+        <p>Powerful tools to transform complex decisions into clear insights.</p>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card fade-in" tabindex="0">
+          <div class="feature-icon"><i class="fas fa-balance-scale"></i></div>
+          <h3>Decision Comparison</h3>
+          <p>Compare multiple options side-by-side across all factors that matter to you.</p>
+        </article>
+        <article class="feature-card fade-in" tabindex="0">
+          <div class="feature-icon"><i class="fas fa-weight-hanging"></i></div>
+          <h3>Weighted Analysis</h3>
+          <p>Assign importance to factors that matter most and let the algorithm do the rest.</p>
+        </article>
+        <article class="feature-card fade-in" tabindex="0">
+          <div class="feature-icon"><i class="fas fa-chart-pie"></i></div>
+          <h3>Visual Insights</h3>
+          <p>Understand results through beautiful charts, graphs, and visual comparisons.</p>
+        </article>
+        <article class="feature-card fade-in" tabindex="0">
+          <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+          <h3>Smart Recommendations</h3>
+          <p>Receive data-backed suggestions with clear explanations of why each option ranks.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="section" id="how-it-works" style="background: var(--white);" aria-labelledby="how-title">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Process</span>
+        <h2 id="how-title">How It Works</h2>
+        <p>Four simple steps to clarity.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card fade-in">
+          <div class="step-number">1</div>
+          <h3>Enter Your Options</h3>
+          <p>List the choices you're considering — jobs, colleges, cities, or anything else.</p>
+        </div>
+        <div class="step-card fade-in">
+          <div class="step-number">2</div>
+          <h3>Choose Factors</h3>
+          <p>Define what matters: salary, location, growth, stability — your criteria.</p>
+        </div>
+        <div class="step-card fade-in">
+          <div class="step-number">3</div>
+          <h3>Assign Weights</h3>
+          <p>Rate each factor's importance on a scale of 1-10 using intuitive sliders.</p>
+        </div>
+        <div class="step-card fade-in">
+          <div class="step-number">4</div>
+          <h3>Get Results</h3>
+          <p>View ranked options, scores, charts, and a personalized recommendation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section" aria-labelledby="benefits-title">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Benefits</span>
+        <h2 id="benefits-title">Why Use Structured Decision Making?</h2>
+        <p>Move from uncertainty to clarity with a proven analytical framework.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-item fade-in-left"><div class="benefit-icon"><i class="fas fa-check"></i></div><span>Reduce uncertainty</span></div>
+        <div class="benefit-item fade-in-left"><div class="benefit-icon"><i class="fas fa-check"></i></div><span>Make objective decisions</span></div>
+        <div class="benefit-item fade-in-left"><div class="benefit-icon"><i class="fas fa-check"></i></div><span>Save time</span></div>
+        <div class="benefit-item fade-in-left"><div class="benefit-icon"><i class="fas fa-check"></i></div><span>Gain confidence</span></div>
+        <div class="benefit-item fade-in-left"><div class="benefit-icon"><i class="fas fa-check"></i></div><span>Visualize outcomes</span></div>
+        <div class="benefit-item fade-in-left"><div class="benefit-icon"><i class="fas fa-check"></i></div><span>Prioritize what matters</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" aria-labelledby="cta-title">
+    <div class="container">
+      <h2 id="cta-title" class="fade-in">Ready to Make Better Decisions?</h2>
+      <p class="fade-in">Join thousands who use structured analysis to make life's most important choices.</p>
+      <a href="simulator.html" class="btn btn-accent btn-lg fade-in">Start Your First Simulation</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3><i class="fas fa-route"></i> DecisionSim</h3>
+          <p>Making better life decisions through structured analysis, weighted scoring, and intelligent insights.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="simulator.html">Start Simulation</a>
+          <a href="results.html">Insights</a>
+          <a href="dashboard.html">Dashboard</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 DecisionSim. All rights reserved.</span>
+        <span>Built with clarity in mind.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>

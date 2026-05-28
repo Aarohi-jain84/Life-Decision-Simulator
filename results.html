@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View detailed decision analysis with charts, rankings, and recommendations.">
+  <title>Decision Insights | Life Decision Simulator</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="navbar-brand" aria-label="Life Decision Simulator Home">
+        <span class="brand-icon"><i class="fas fa-route"></i></span>
+        DecisionSim
+      </a>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+        <li role="none"><a href="simulator.html" role="menuitem">Start Simulation</a></li>
+        <li role="none"><a href="results.html" role="menuitem" class="active">Insights</a></li>
+        <li role="none"><a href="dashboard.html" role="menuitem">Dashboard</a></li>
+        <li role="none"><a href="about.html" role="menuitem">About</a></li>
+        <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Decision Insights</h1>
+      <p>Detailed analysis, rankings, and visual breakdown of your comparison.</p>
+    </div>
+  </section>
+
+  <section class="section" id="results-section">
+    <div class="container">
+
+      <!-- Loading -->
+      <div id="results-loading" class="spinner"></div>
+
+      <!-- Error / Empty -->
+      <div id="results-empty" style="display:none;">
+        <div class="empty-state">
+          <div class="empty-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3>No results to display</h3>
+          <p>Run a simulation first or load a saved decision from your dashboard.</p>
+          <a href="simulator.html" class="btn btn-primary">Start Simulation</a>
+          <a href="dashboard.html" class="btn btn-outline" style="margin-left:0.5rem;">Go to Dashboard</a>
+        </div>
+      </div>
+
+      <!-- Results Content -->
+      <div id="results-content" style="display:none;">
+
+        <!-- Summary Cards -->
+        <div class="results-summary-grid fade-in" id="summary-cards"></div>
+
+        <!-- Rankings -->
+        <div class="simulator-card fade-in">
+          <div class="simulator-card-header">
+            <h2><i class="fas fa-trophy"></i> Rankings</h2>
+          </div>
+          <div class="rankings-list" id="rankings-list"></div>
+        </div>
+
+        <!-- Charts -->
+        <div class="charts-grid fade-in">
+          <div class="chart-card">
+            <h3>Final Scores</h3>
+            <div class="chart-wrapper"><canvas id="bar-chart" aria-label="Bar chart of final scores"></canvas></div>
+          </div>
+          <div class="chart-card">
+            <h3>Factor Performance</h3>
+            <div class="chart-wrapper"><canvas id="radar-chart" aria-label="Radar chart of factor performance"></canvas></div>
+          </div>
+          <div class="chart-card full-width">
+            <h3>Weight Distribution</h3>
+            <div class="chart-wrapper" style="max-width:400px;margin:0 auto;"><canvas id="doughnut-chart" aria-label="Doughnut chart of weight distribution"></canvas></div>
+          </div>
+        </div>
+
+        <!-- Recommendation -->
+        <div class="recommendation-card fade-in" id="recommendation-card">
+          <h3><i class="fas fa-lightbulb"></i> AI-Style Recommendation</h3>
+          <p id="recommendation-text">Loading your personalized recommendation...</p>
+        </div>
+
+        <!-- Full Comparison Table -->
+        <div class="simulator-card fade-in">
+          <div class="simulator-card-header">
+            <h2><i class="fas fa-table"></i> Comparison Table</h2>
+          </div>
+          <div class="comparison-table-wrapper" id="comparison-table-wrapper"></div>
+        </div>
+
+        <!-- Actions -->
+        <div class="simulator-card fade-in">
+          <div class="results-actions">
+            <button class="btn btn-primary" id="save-decision-btn"><i class="fas fa-save"></i> Save to Dashboard</button>
+            <button class="btn btn-outline" id="export-json-btn"><i class="fas fa-download"></i> Export JSON</button>
+            <button class="btn btn-outline" id="export-csv-btn"><i class="fas fa-file-csv"></i> Export CSV</button>
+            <button class="btn btn-outline" id="back-to-simulator-btn"><i class="fas fa-arrow-left"></i> Back to Simulator</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3><i class="fas fa-route"></i> DecisionSim</h3>
+          <p>Making better life decisions through structured analysis, weighted scoring, and intelligent insights.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="simulator.html">Start Simulation</a>
+          <a href="results.html">Insights</a>
+          <a href="dashboard.html">Dashboard</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 DecisionSim. All rights reserved.</span>
+        <span>Built with clarity in mind.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/simulator.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/results-page.js"></script>
+</body>
+</html>
